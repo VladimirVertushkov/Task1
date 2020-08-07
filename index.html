@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<script>
+
+    let finish = [];
+    let name = ['Разнообразный', 'привет', 'мама', 'брат', 'сестра', 'бабушка'];
+    for (let i=0; i<=name.length-1 ; i++){
+        let name1 = name[i];
+        let name2 =name1.split('');
+        
+        for (let j=0; j<=(name2.length-1); j++){
+            for(let f=(j+1); f<=name2.length; f++){
+                if(name2[j]==name2[f]){
+                    name2.splice(f,1);
+                }
+            }
+        }
+        let name4 = name2.join('');
+        finish.push(name4);
+    }
+    alert(finish);
+</script>
+</body>
+</html>
